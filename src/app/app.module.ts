@@ -17,6 +17,13 @@ import { OndeFicaComponent } from './oferta/onde-fica/onde-fica.component';
 
 import { DescricaoReduzida } from './util/descricao-reduzida.pipe'
 
+
+import { registerLocaleData } from "@angular/common";
+import localePt from "@angular/common/locales/pt";
+import { OrdemCompraComponent } from './ordem-compra/ordem-compra.component';
+import { OrdemCompraSucessoComponent } from './ordem-compra-sucesso/ordem-compra-sucesso.component';
+registerLocaleData(localePt);
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +35,7 @@ import { DescricaoReduzida } from './util/descricao-reduzida.pipe'
     OfertaComponent,
     ComoUsarComponent,
     OndeFicaComponent, 
-    DescricaoReduzida
+    DescricaoReduzida, OrdemCompraComponent, OrdemCompraSucessoComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +43,7 @@ import { DescricaoReduzida } from './util/descricao-reduzida.pipe'
     RouterModule.forRoot(ROUTES)
   ],
   /*providers: [ { provide: LOCALE_ID, useValue: 'pt-BR' } ],*/
-  providers: [ { provide: LOCALE_ID, useValue: 'pt' } ],
+  /*providers: [ { provide: LOCALE_ID, useValue: 'pt' } ],*/
   bootstrap: [AppComponent]
 })
 export class AppModule { }
